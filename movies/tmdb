@@ -2,7 +2,7 @@
 # Author: Alexander Epstein https://github.com/alexanderepstein
 # Author: Navan Chauhan https://github.com/navanchauhan
 
-currentVersion="1.22.1"
+currentVersion="1.23.0"
 configuredClient=""
 configuredPython=""
 APIKEY="b2f8880475c888056b6207067fbaa197"
@@ -19,7 +19,7 @@ getConfiguredClient()
   elif command -v fetch &>/dev/null; then
     configuredClient="fetch"
   else
-    echo "Error: This tool reqires either curl, wget, httpie or fetch to be installed." >&2
+    echo "Error: This tool requires either curl, wget, httpie or fetch to be installed." >&2
     return 1
   fi
 }

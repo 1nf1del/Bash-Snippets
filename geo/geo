@@ -4,7 +4,7 @@
 # Author: Jake Meyer
 # Github: https://github.com/jakewmeyer
 
-currentVersion="1.22.1"
+currentVersion="1.23.0"
 configuredClient=""
 
 ## This function determines which http get tool the system has installed and returns an error if there isnt one
@@ -19,7 +19,7 @@ getConfiguredClient()
   elif command -v fetch &>/dev/null; then
     configuredClient="fetch"
   else
-    echo "Error: This tool reqires either curl, wget, httpie or fetch to be installed." >&2
+    echo "Error: This tool requires either curl, wget, httpie or fetch to be installed." >&2
     return 1
   fi
 }
@@ -68,7 +68,7 @@ version() {
 
 # Fetches WAN IP address
 wan_search() {
-  httpGet https://api.ipify.org?format=json | grep -Eo "[0-9.]*"
+  httpGet https://api.ipify.org
 }
 
 # Fetches current LAN IP address
